@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: next-dep
+  namespace: next
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: next-app
+  template:
+    metadata:
+      labels:
+        app: next-app
+    spec:
+      containers:
+        - name: next
+          image: xanderflinn/next-yt:d0b6112b6c9f6e1a591c0264b6c50e53c0ce2f3e
+          ports:
+            - containerPort: 3000
