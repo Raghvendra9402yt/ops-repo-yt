@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: next
-          image: xanderflinn/next-yt:bd3268f474a011fa693264ac67e7622f018c12db
+          image: xanderflinn/next-yt:e42f477ef81957faa9d562d0bc747885fe6de295
           ports:
             - containerPort: 3000
