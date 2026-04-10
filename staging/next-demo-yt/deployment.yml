@@ -18,3 +18,12 @@ spec:
           image: xanderflinn/next-yt:e42f477ef81957faa9d562d0bc747885fe6de295
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - name: env-file
+              readOnly: true
+              mountPath: "/app/.env"
+              subPath: .env
+      volumes:
+        - name: env-file
+          secret:
+            secretName: next-secret
