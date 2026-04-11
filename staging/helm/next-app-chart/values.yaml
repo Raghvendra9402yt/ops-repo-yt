@@ -11,3 +11,9 @@ service:
 ingress:
   enabled: true
   className: nginx
+
+hpa:
+  enabled: false
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilization: 50

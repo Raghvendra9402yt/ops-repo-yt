@@ -1,4 +1,4 @@
-replicaCount: 3
+replicaCount: 2
 image:
   repository: xanderflinn/cpu-app
   tag: "latest"
@@ -11,3 +11,9 @@ service:
 ingress:
   enabled: false
   className: nginx
+
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilization: 50
