@@ -17,9 +17,8 @@ spec:
         - name: {{ .Release.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          args:
-            - "--cpu"
-            - "{{ .Values.stress.cpu }}"
+          ports:
+            - containerPort: 3000
           resources:
             requests:
               cpu: "100m"

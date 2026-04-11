@@ -1,14 +1,11 @@
 replicaCount: 2
 image:
-  repository: polinux/stress
+  repository: xanderflinn/cpu-app
   tag: "latest"
   pullPolicy: IfNotPresent
 
-stress:
-  cpu: 2
-
 service:
-  enabled: false
+  enabled: true
   type: LoadBalancer
   port: 80
 
